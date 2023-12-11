@@ -22,6 +22,11 @@ function App() {
 	return (
 		<div className='container mx-auto'>
 			<Search searchText={(text) => setTerm(text)} />
+			{!isLoading && images.length === 0 && (
+				<h1 className=' text-6xl text-center mx-auto mt-32 text-red-600'>
+					No Image with the search term found
+				</h1>
+			)}
 			{isLoading ? (
 				<div className=' flex items-center justify-center m-auto text-40'>
 					{' '}
