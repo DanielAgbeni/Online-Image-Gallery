@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
 	let currentYear = new Date().getFullYear();
 	return (
-		<div className=' h-10 bg-slate-100 rounded-xl w-full text-center shadow-xl'>
+		<div className=' h-10 bg-slate-100 rounded-xl w-full text-center shadow-xl py-2 mt-5 bottom-0'>
 			<p>
 				Photos provided by{' '}
 				<span className=' underline text-green-500'>
