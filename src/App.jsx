@@ -3,6 +3,7 @@ import { useState } from 'react';
 import ImageCard from './components/ImageCard';
 import Loading from './components/Loading';
 import Search from './components/Search';
+import Footer from './components/Footer';
 
 function App() {
 	const [images, setImages] = useState([]);
@@ -42,6 +43,9 @@ function App() {
 					))}
 				</div>
 			)}
+			<div>
+				<Footer />
+			</div>
 		</div>
 	);
 }
