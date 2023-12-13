@@ -1,11 +1,9 @@
-# React + Vite + Tailwind Initial setup
+# Online Image Gallery
 
-This template provides a minimal setup to get React working in Vite alongside tailwind installed.
+Dive into the world of free online Images
 
-Currently, two official plugins are available:
+![image](https://github.com/DanielAgbeni/Online-Image-Gallery/assets/99095841/80418758-eb7c-4778-a3b3-1a66562e1fb8)
 
-- Go to package.json and package-lock.json to edit the package name
-- {
-  "name": "YOUR PROJECT NAME",
-  "private": true ....
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+- https://onlineimagegallery.netlify.app/
+
