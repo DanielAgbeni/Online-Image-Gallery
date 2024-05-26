@@ -63,14 +63,14 @@ function App() {
 				isOpen={modalIsOpen}
 				onRequestClose={closeModal}
 				contentLabel='Image Preview'
-				className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 h-screen p-10'
+				className='fixed inset-0 flex items-center justify-center p-4 bg-black bg-opacity-50'
 				overlayClassName='fixed inset-0 bg-black bg-opacity-50'>
 				{selectedImage && (
-					<div className='bg-white p-6 rounded-lg shadow-lg h-screen'>
+					<div className='bg-white p-6 rounded-lg shadow-lg max-w-full md:max-w-2xl mx-auto'>
 						<img
 							src={selectedImage.largeImageURL}
 							alt={selectedImage.tags}
-							className=' h-5/6 rounded-lg'
+							className='w-full rounded-lg'
 						/>
 						<a
 							href={selectedImage.largeImageURL}
@@ -80,7 +80,7 @@ function App() {
 						</a>
 						<button
 							onClick={closeModal}
-							className='mt-4 inline-block bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-700'>
+							className='mt-4 inline-block bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-700 ml-4'>
 							Close
 						</button>
 					</div>
