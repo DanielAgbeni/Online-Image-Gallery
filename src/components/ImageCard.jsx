@@ -1,9 +1,11 @@
 import React from 'react';
 
-const ImageCard = ({ image }) => {
+const ImageCard = ({ image, onClick }) => {
 	const tags = image.tags.split(',');
 	return (
-		<div className=' max-w-sm rounded-xl overflow-hidden shadow-lg'>
+		<div
+			className=' max-w-sm rounded-xl overflow-hidden shadow-lg cursor-pointer'
+			onClick={onClick}>
 			<img
 				src={image.webformatURL}
 				alt=''
