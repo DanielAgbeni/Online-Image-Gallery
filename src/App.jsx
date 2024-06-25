@@ -4,6 +4,7 @@ import Loading from './components/Loading';
 import Search from './components/Search';
 import Footer from './components/Footer';
 import Modal from 'react-modal';
+import AdSenseAd from './components/AdSenseAd';
 
 Modal.setAppElement('#root');
 
@@ -39,23 +40,42 @@ function App() {
 	return (
 		<div className='container mx-auto'>
 			<Search searchText={(text) => setTerm(text)} />
+			<AdSenseAd
+				adClient='ca-pub-4884232232976809'
+				adSlot='7370381956'
+			/>
 			{!isLoading && images.length === 0 && (
 				<h1 className='text-6xl text-center mx-auto mt-32 text-red-600'>
 					No Image with the search term found
 				</h1>
 			)}
+			{!isLoading && images.length > 0 && (
+				<AdSenseAd
+					adClient='ca-pub-4884232232976809'
+					adSlot='7370381956'
+				/>
+			)}
+
 			{isLoading ? (
 				<div className='flex items-center justify-center m-auto text-40'>
 					<Loading />
 				</div>
 			) : (
 				<div className='grid md:grid-cols-3 grid-cols-1 gap-4'>
-					{images.map((image) => (
-						<ImageCard
-							key={image.id}
-							image={image}
-							onClick={() => openModal(image)}
-						/>
+					{images.map((image, index) => (
+						<React.Fragment key={image.id}>
+							<ImageCard
+								key={image.id}
+								image={image}
+								onClick={() => openModal(image)}
+							/>
+							{(index + 1) % 3 === 0 && (
+								<AdSenseAd
+									adClient='ca-pub-4884232232976809'
+									adSlot='7370381956'
+								/>
+							)}
+						</React.Fragment>
 					))}
 				</div>
 			)}
